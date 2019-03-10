@@ -41,6 +41,7 @@ Miscellaneous
 
     localmax
     peak_pick
+    nnls
 
 
 Input validation
@@ -68,6 +69,7 @@ from .utils import *  # pylint: disable=wildcard-import
 from .files import *  # pylint: disable=wildcard-import
 from .matching import *  # pylint: disable=wildcard-import
 from .deprecation import *  # pylint: disable=wildcard-import
+from ._nnls import *  # pylint: disable=wildcard-import
 from . import decorators
 from . import exceptions
 

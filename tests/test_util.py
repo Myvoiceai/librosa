@@ -1026,6 +1026,7 @@ def test_nnls_vector(dtype_A, dtype_B):
 
     x_rec = librosa.util.nnls(A, B)
 
+    assert np.all(x_rec >= 0)
     assert np.sqrt(np.mean((B - A.dot(x_rec))**2)) <= 1e-6
 
 
@@ -1044,6 +1045,7 @@ def test_nnls_wide(dtype_A, dtype_B):
 
     x_rec = librosa.util.nnls(A, B)
 
+    assert np.all(x_rec >= 0)
     assert np.sqrt(np.mean((B - A.dot(x_rec))**2)) <= 1e-6
 
 
@@ -1062,5 +1064,5 @@ def test_nnls_wide(dtype_A, dtype_B):
 
     x_rec = librosa.util.nnls(A, B)
 
+    assert np.all(x_rec >= 0)
     assert np.sqrt(np.mean((B - A.dot(x_rec))**2)) <= 1e-6
-
